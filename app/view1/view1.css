@@ -1,0 +1,143 @@
+
+h1 {
+    text-align: center;
+}
+button {
+    background-color: : #181f29;
+
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 10px;
+    font-family: Arial;
+
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+button:hover {
+    background-color: : #181f29;
+}
+button:focus,
+button:active,
+button.active,
+button:focus:active {
+    background-image: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    padding: 5%;
+    margin: 5%;
+    background-color: white;
+    margin: auto;
+    border-radius: 28px;
+}
+.reviewCard {
+    margin: 2%;
+}
+
+.container {
+    padding: 2px 16px;
+}
+.star-ratings-css {
+    unicode-bidi: bidi-override;
+    color: #c5c5c5;
+    font-size: 25px;
+    height: 25px;
+    width: 100px;
+    margin: auto;
+    position: relative;
+    text-align: left;
+    text-shadow: 0px 1px 0 #a2a2a2;
+    margin: auto;
+}
+.star-ratings-css-top {
+    color: #e7711b;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.star-ratings-css-bottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+}
+.playImage {
+    display: block;
+    margin: auto;
+    max-width: 10%;
+}
+.loadMore {
+    text-align: center;
+    padding: 5%;
+}
+.reviewer {
+    float: left;
+    margin: auto;
+    width: auto;
+       
+}
+.reviewBody {
+    text-align: center;
+    margin: auto;
+     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+.averageRating {
+    text-align: center;
+    margin: auto;
+    display: table;
+}
+.sortorder:after {
+    content: '\25b2'; 
+  }
+.sortorder.reverse:after {
+    content: '\25bc'; 
+}
+.filters {
+        max-width: 75%;
+    text-align: left;
+    margin: 1.5%;
+}
+.reviewBody{
+       background-color: rgba(24, 31, 41, 0.65);
+    
+        display: inline-block;
+    text-align: center;
+    margin: auto;
+    border-radius: 28px;
+    padding: 5%;
+}
+.reviewContainer{
+    text-align: center;
+}
+.mainContainer{
+    margin: 2%;
+}
+.headerImage{
+    margin: 2%;
+}
+.menuBar{
+        background: #181f29;
+        padding: 20px;
+}
+.ratingText{
+    font-weight: bold;
+    font-size: 20px;
+   text-align: center;
+}
+.reviewText{
+        margin: auto;
+    width: auto;
+    max-width: 50%;
+        font-size: 18px;
+}
+.author{
+    text-align: center;
+
+}
