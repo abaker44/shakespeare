@@ -1,64 +1,64 @@
 <link rel="stylesheet" href="view1/view1.css">
+<!-- this is the dark bar along the top -->
 <div class="menuBar"></div>
 <div class="header">
-<div class="headerImage">
-    <img class="playImage" src="resources/hamlet.jpg">
-</div>
-<div class="averageRating">
-    <h4>Average Rating</h4>
-    <div class="ratingText">
-    <p > {{avgRating}} </p>
+    <div class="headerImage">
+        <img class="playImage" src="resources/hamlet.jpg">
     </div>
-    <div class="star-ratings-css">
-        <div class="star-ratings-css-top" style="width: {{(avgRating/5)* 100}}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+    <!-- this is the average rating  -->
+    <div class="averageRating">
+        <h4>Average Rating</h4>
+        <div class="ratingText">
+            <p> {{avgRating}} </p>
+        </div>
+        <!-- The stars for the average rating  -->
+        <div class="star-ratings-css">
+            <div class="star-ratings-css-top" style="width: {{(avgRating/5)* 100}}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
     </div>
 </div>
-</div>
-
+<!-- This is where all of the reviews are displayed -->
 <div ng-app="shakespeare.view" ng-controller="View1Ctrl" class="mainContainer">
-    
+
     <div class="reviewContainer">
-<div class="reviewBody">
-<div class="filters">
-            <button ng-click="sortBy('rating')">Rating <span class="sortorder" ng-show="propertyName === 'rating'" ng-class="{reverse: reverse}"></span></button>
-       
-            <button ng-click="sortBy('author')">Name <span class="sortorder" ng-show="propertyName === 'author'" ng-class="{reverse: reverse}"></span></button>
+        <div class="reviewBody">
+            <!--These are the filter buttons you can add more and filter by and key in the json recieved  -->
+            <div class="filters">
+                <button ng-click="sortBy('rating')">Rating <span class="sortorder" ng-show="propertyName === 'rating'" ng-class="{reverse: reverse}"></span></button>
 
-           <button ng-click="sortBy('publish_date')">Date <span class="sortorder" ng-show="propertyName === 'publish_date'" ng-class="{reverse: reverse}"></span></button>
+                <button ng-click="sortBy('author')">Name <span class="sortorder" ng-show="propertyName === 'author'" ng-class="{reverse: reverse}"></span></button>
 
-    </div>
-    <div ng-repeat="x in reviewList | orderBy:propertyName:reverse" class="container">
-        <div class="reviewCard">
-            <div class="card">
-                <div class="reviewer">
-                <div class="ratingText">
-               <p > {{x.rating}} </p>
-               </div>
-                    <div class="star-ratings-css">
-                        <div class="star-ratings-css-top" style="width: {{(x.rating/5)* 100}}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                <button ng-click="sortBy('publish_date')">Date <span class="sortorder" ng-show="propertyName === 'publish_date'" ng-class="{reverse: reverse}"></span></button>
+            </div>
+            <!-- The acutal cards of the review -->
+            <div ng-repeat="x in reviewList | orderBy:propertyName:reverse" class="container">
+                <div class="reviewCard">
+                    <div class="card">
+                        <div class="reviewer">
+                            <div class="ratingText">
+                                <p> {{x.rating}} </p>
+                            </div>
+                            <div class="star-ratings-css">
+                                <div class="star-ratings-css-top" style="width: {{(x.rating/5)* 100}}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            </div>
+                            <div class="author">
+                                <h4>{{x.author}}</h4>
+                            </div>
+                        </div>
+                        <div class="reviewText">
+                            <p>"{{x.body}}"</p>
+                            <br>
+                            <p>{{x.publish_date | date:'fullDate'}}</p>
+                        </div>
                     </div>
-                    <div class="author">
-                    <h4>{{x.author}}</h4>
-                    </div>
-                </div>
-
-                <div class="reviewText">
-                    <p>"{{x.body}}"</p>
-                    <br>
-
-                    <p>{{x.publish_date | date:'fullDate'}}</p>
 
                 </div>
             </div>
-
+            <div class="loadMore">
+                <button class="loadButton" ng-click="loadMore()">Load More</button>
+            </div>
         </div>
     </div>
-
-    <div class="loadMore">
-        <button class="loadButton" ng-click="loadMore()">Load More</button>
-    </div>
-    </div>
-    </div>
-    </div>
+</div>
