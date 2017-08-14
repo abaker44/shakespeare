@@ -7,6 +7,6 @@
 5. npm start
 6. access the application at http://localhost:8000
 ```
-# Unit Tests
+# Instructions to run unit tests
 ```
-unit tests are not complete yet but using Karma framwork
+1. npm test
