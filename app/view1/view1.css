@@ -29,6 +29,7 @@ button:focus:active {
 .card {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
     padding: 5%;
+    width: 95%;
     margin: 5%;
     background-color: white;
     margin: auto;
@@ -39,7 +40,8 @@ button:focus:active {
 }
 
 .container {
-    padding: 2px 16px;
+    padding: 1%;
+    width: 99%
 }
 .star-ratings-css {
     unicode-bidi: bidi-override;
@@ -81,7 +83,7 @@ button:focus:active {
     float: left;
     margin: auto;
     width: auto;
-       
+
 }
 .reviewBody {
     text-align: center;
@@ -94,10 +96,10 @@ button:focus:active {
     display: table;
 }
 .sortorder:after {
-    content: '\25b2'; 
+    content: '\25b2';
   }
 .sortorder.reverse:after {
-    content: '\25bc'; 
+    content: '\25bc';
 }
 .filters {
         max-width: 75%;
@@ -106,12 +108,13 @@ button:focus:active {
 }
 .reviewBody{
        background-color: rgba(24, 31, 41, 0.65);
-    
+
         display: inline-block;
     text-align: center;
     margin: auto;
     border-radius: 28px;
     padding: 5%;
+    width: 95%
 }
 .reviewContainer{
     text-align: center;
