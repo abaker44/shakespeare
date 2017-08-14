@@ -7,3 +7,6 @@
 5. npm start
 6. access the application at http://localhost:8000
 ```
+# Instructions to run unit tests
+```
+1. npm test
